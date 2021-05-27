@@ -15,4 +15,7 @@ class Rectangle:
     def get_perimeter(self):
         return 2 * self.width + 2 * self.height
 
-class Square:
+
+class Square(Rectangle):
+    def __init__(self, side_length):
+        Rectangle.__init__(self, side_length, side_length)
