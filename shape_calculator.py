@@ -9,10 +9,18 @@ class Rectangle:
         )
 
     def set_width(self, new_width):
-        self.width = new_width
+        if isinstance(self, Square):
+            self.width = new_width
+            self.height = new_width
+        else:
+            self.width = new_width
 
     def set_height(self, new_height):
-        self.height = new_height
+        if isinstance(self, Square):
+            self.height = new_height
+            self.width = new_height
+        else:
+            self.height = new_height
 
     def get_area(self):
         return self.width * self.height
