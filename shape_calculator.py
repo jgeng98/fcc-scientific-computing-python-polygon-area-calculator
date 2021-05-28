@@ -3,6 +3,11 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        return "Rectangle(width={width}, height={height})".format(
+            width=self.width, height=self.height
+        )
+
     def set_width(self, new_width):
         self.width = new_width
 
