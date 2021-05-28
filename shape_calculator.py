@@ -4,9 +4,12 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        return "Rectangle(width={width}, height={height})".format(
-            width=self.width, height=self.height
-        )
+        if isinstance(self, Square):
+            return "Square(side={side_length})".format(side_length=self.width)
+        else:
+            return "Rectangle(width={width}, height={height})".format(
+                width=self.width, height=self.height
+            )
 
     def set_width(self, new_width):
         if isinstance(self, Square):
@@ -46,9 +49,6 @@ class Rectangle:
 class Square(Rectangle):
     def __init__(self, side_length):
         Rectangle.__init__(self, side_length, side_length)
-
-    def __str__(self):
-        return "Square(side={side_length})".format(side_length=self.width)
 
     def set_side(self, new_side_length):
         self.height = new_side_length
