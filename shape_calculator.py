@@ -11,7 +11,7 @@ class Rectangle:
     def set_width(self, new_width):
         self.width = new_width
 
-    def sef_height(self, new_height):
+    def set_height(self, new_height):
         self.height = new_height
 
     def get_area(self):
@@ -25,7 +25,7 @@ class Rectangle:
 
     def get_picture(self):
         if self.height > 50 or self.width > 50:
-            return "Too big for picture"
+            return "Too big for picture."
 
         picture = ["*" * self.width + "\n" for i in range(self.height)]
 
