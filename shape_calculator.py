@@ -35,3 +35,6 @@ class Rectangle:
 class Square(Rectangle):
     def __init__(self, side_length):
         Rectangle.__init__(self, side_length, side_length)
+
+    def __str__(self):
+        return "Square(side={side_length})".format(side_length=self.width)
