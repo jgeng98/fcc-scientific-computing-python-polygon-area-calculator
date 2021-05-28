@@ -38,3 +38,7 @@ class Square(Rectangle):
 
     def __str__(self):
         return "Square(side={side_length})".format(side_length=self.width)
+
+    def set_side(self, new_side_length):
+        self.height = new_side_length
+        self.width = new_side_length
