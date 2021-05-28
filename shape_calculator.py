@@ -31,6 +31,9 @@ class Rectangle:
 
         return "".join(picture)
 
+    def get_amount_inside(self, shape):
+        return self.get_area() // shape.get_area()
+
 
 class Square(Rectangle):
     def __init__(self, side_length):
